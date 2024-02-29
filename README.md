@@ -6,9 +6,13 @@ This README file contains information on the contents of the meta-m840-imx8mp-ki
 Please see the corresponding sections below for details.
 
 BSP Version
-imx-5.10.72-2.2.0 with Yocto Kirkstone
+===========
+
+imx-5.15.72 with Yocto Kirkstone
 
 Dependencies
+============
+
 This layer depends on:
 
 URI: git://git.yoctoproject.org/poky branch: master revision: HEAD
@@ -22,6 +26,8 @@ URI: git://git.openembedded.org/meta-openembedded/meta-perl branch: master revis
 URI: git://git.openembedded.org/meta-openembedded/meta-networking branch: master revision: HEAD prio: default
 
 Quick Start
+===========
+
 $ source setup-environment build/
 Add this layer to bblayers.conf and the dependencies above
 Set MACHINE in local.conf to one of the supported boards
@@ -29,10 +35,17 @@ $ bitbake m840-image
 dd to a SD card the generated wic file
 Boot Yocto through SD card
 Boot the PSMC-M840
+
 Table of Contents
-I. Adding the M840 layer to your build II. Build the Layer III. License
+=================
+
+I. Adding the M840 layer to your build 
+II. Build the Layer 
+III. License
 
 I. Adding the M840 layer to your build
+=========================================
+
 Assuming this layer exists at the top-level of your yocto build tree, you can add it to the build system by adding the location of the M840 layer to bblayers.conf, along with any other layers needed. e.g.:
 
 BBLAYERS ?= "
@@ -43,5 +56,8 @@ BBLAYERS ?= "
 
 or you can run 'bitbake-layers add-layer meta-m840-imx8mp-kirkstone' command.
 
+
 II. Build the Layer
+===================
+
 Run $ bitbake m840-bsp-layer
